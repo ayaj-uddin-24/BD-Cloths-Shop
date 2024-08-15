@@ -8,7 +8,7 @@ const RelatedProducts = ({category,id}) => {
   const [related,setRelated] = useState([]);
 
   useEffect(()=>{
-    fetch(`http://localhost:4000/relatedproducts`,{
+    fetch(`${backend_url}/relatedproducts`,{
       method: 'POST',
       headers: {
         Accept: 'application/json',
