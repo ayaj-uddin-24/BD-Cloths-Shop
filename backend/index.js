@@ -13,7 +13,14 @@ app.use(express.json());
 app.use(cors());
 
 // Database Connection With MongoDB
-mongoose.connect(process.env.MONGO_URL);
+mongoose
+  .connect(process.env.MONGO_URL)
+  .then(() => {
+    console.log("DB is connected");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 //Image Storage Engine
 const storage = multer.diskStorage({
@@ -249,6 +256,6 @@ app.post("/removeproduct", async (req, res) => {
 
 // Starting Express Server
 app.listen(port, (error) => {
-  if (!error) console.log("Server Running on port " + port);
+  if (!error) console.log("Server is Running on port " + port);
   else console.log("Error : ", error);
 });
