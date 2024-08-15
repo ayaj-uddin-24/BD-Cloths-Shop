@@ -16,7 +16,7 @@ const LoginSignup = () => {
 
   const login = async () => {
     let dataObj;
-    await fetch("${backend_url}/login", {
+    await fetch(`${backend_url}/login`, {
       method: "POST",
       headers: {
         Accept: "application/form-data",
@@ -39,7 +39,7 @@ const LoginSignup = () => {
 
   const signup = async () => {
     let dataObj;
-    await fetch("${backend_url}/signup", {
+    await fetch(`${backend_url}/signup`, {
       method: "POST",
       headers: {
         Accept: "application/form-data",
