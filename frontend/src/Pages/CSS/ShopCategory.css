@@ -3,20 +3,24 @@
   margin: 30px auto;
   width: 80%;
 }
+
 .shopcategory-indexSort {
   display: flex;
   margin: 0px 170px;
   justify-content: space-between;
   align-items: center;
 }
+
 .shopcategory-sort {
   padding: 10px 20px;
   border-radius: 40px;
   border: 1px solid #888;
 }
+
 .shopcategory-indexSort p span {
   font-weight: 600;
 }
+
 .shopcategory-products {
   width: 90%;
   max-width: 1360px;
@@ -26,6 +30,7 @@
   flex-wrap: wrap;
   gap: 25px;
 }
+
 .shopcategory-loadmore {
   display: flex;
   justify-content: center;
@@ -39,6 +44,7 @@
   font-size: 16px;
   font-weight: 500;
 }
+
 @media (max-width: 1280px) {
   .shopcategory-banner {
     margin: 20px auto;
@@ -56,6 +62,7 @@
     font-size: 12px;
   }
 }
+
 @media (max-width: 800px) {
   .shopcategory-banner {
     width: 95%;

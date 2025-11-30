@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { backend_url } from "../App";
 
 export const ShopContext = createContext(null);
@@ -47,7 +47,9 @@ const ShopContextProvider = (props) => {
             (product) => product.id === Number(item)
           );
           totalAmount += cartItems[item] * itemInfo.new_price;
-        } catch (error) {}
+        } catch (error) {
+          console.log(error);
+        }
       }
     }
     return totalAmount;
@@ -62,7 +64,9 @@ const ShopContextProvider = (props) => {
             (product) => product.id === Number(item)
           );
           totalItem += itemInfo ? cartItems[item] : 0;
-        } catch (error) {}
+        } catch (error) {
+          console.log(error);
+        }
       }
     }
     return totalItem;

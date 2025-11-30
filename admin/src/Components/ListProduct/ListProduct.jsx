@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./ListProduct.css";
 import cross_icon from "../Assets/cross_icon.png";
 import { backend_url, currency } from "../../App";

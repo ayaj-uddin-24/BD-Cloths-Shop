@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./AddProduct.css";
 import upload_area from "../Assets/upload_area.svg";
 import { backend_url } from "../../App";
@@ -42,16 +42,13 @@ const AddProduct = () => {
         product.image = dataObj.image_url;
 
         // Add the product
-        const addProductResponse = await fetch(
-          `${backend_url}/addproduct`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(product),
-          }
-        );
+        const addProductResponse = await fetch(`${backend_url}/addproduct`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(product),
+        });
 
         console.log("Add Product Response Status:", addProductResponse.status);
         if (!addProductResponse.ok) {
